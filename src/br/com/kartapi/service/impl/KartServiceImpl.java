@@ -1,12 +1,18 @@
-package br.com.kartapi.utils;
+package br.com.kartapi.service.impl;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.util.List;
 
-public class FileUtil {
+import br.com.kartapi.model.Piloto;
+import br.com.kartapi.service.KartService;
+
+public class KartServiceImpl implements KartService {
 	
-	public static void readFile(String path) {
+	
+	@Override
+	public List<Piloto> getPilotos(String path) {
 		try {
 			File file = new File(path);
 			FileReader reader = new FileReader(file);
@@ -20,5 +26,9 @@ public class FileUtil {
 			e.printStackTrace();
 		}
 		
+		return null;
 	}
+	
+
+	
 }

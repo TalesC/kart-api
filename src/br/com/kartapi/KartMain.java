@@ -1,13 +1,13 @@
 package br.com.kartapi;
 
-import br.com.kartapi.utils.FileUtil;
+import br.com.kartapi.service.KartService;
+import br.com.kartapi.service.impl.KartServiceImpl;
 
 public class KartMain {
 	
 	public static void main(String[] args) {
-		//ler o arquivo txt criar lista com as informações do txt
-		FileUtil.readFile("");
-		// 
+		KartService service = new KartServiceImpl();
+		service.getPilotos("./resource/kartlog.csv");
 	}
 
 }
