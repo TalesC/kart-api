@@ -21,7 +21,15 @@ public class Piloto {
 	}
 	
 	public LocalTime getTempoTotal() {
+		Integer min = 0, seg = 0, nano = 0;
 		
+		for(Voltas v : voltas) {
+				min = min + v.getTempoVolta().getMinute();
+				seg = seg + v.getTempoVolta().getSecond();
+				nano = nano + v.getTempoVolta().getNano();
+		};
+		
+		return LocalTime.of(0, min, seg, nano);
 	}
 	
 	public int getTotalVoltas() {
