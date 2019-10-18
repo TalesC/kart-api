@@ -1,5 +1,8 @@
 package br.com.kartapi.service.impl;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import br.com.kartapi.model.Piloto;
@@ -9,7 +12,10 @@ public class CorridaServiceImpl implements CorridaService {
 
 	@Override
 	public void resultado(List<Piloto> pilotos) {
-		pilotos.sort((Piloto p1, Piloto p2) -> p1.getTempoTotal().compareTo(p2.getTempoTotal()));
+		
+		Collections.sort(pilotos, Comparator.comparingInt(Piloto::getTotalVoltas).reversed());
+		Collections.sort(pilotos, Comparator.comparing(Piloto::getTempoTotal));
+		
 		pilotos.forEach(p -> {
 			p.setPosicao(pilotos.indexOf(p) + 1);
 			printResultado(p);
