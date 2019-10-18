@@ -31,7 +31,8 @@ public class PilotoServiceImpl implements PilotoService {
 	private Piloto updatePiloto(Piloto piloto, DadosLog dado) {
 		piloto.getVoltas().add(new Voltas(dado.getHoraTerminoVolta(),
 												dado.getTempoVolta(),
-												dado.getVelocidadeMediaVolta()));
+												dado.getVelocidadeMediaVolta(),
+												dado.getNumeroVolta()));
 		return piloto;
 	}
 
@@ -40,6 +41,7 @@ public class PilotoServiceImpl implements PilotoService {
 		p.setNome(dado.getNomePiloto());
 		p.setCodigo(dado.getCodigoPiloto());
 		p.setVoltas(new ArrayList<Voltas>());
+		updatePiloto(p, dado);
 		return p;
 	}
 

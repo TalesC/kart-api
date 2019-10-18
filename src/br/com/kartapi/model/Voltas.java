@@ -7,15 +7,17 @@ public class Voltas {
 	private LocalTime horaTermino;
 	private LocalTime tempoVolta;
 	private Double velocidadeMedia;
+	private Integer numeroVolta;
 	
 	public Voltas() {
 	}
 	
-	public Voltas(LocalTime horaTermino, LocalTime tempoVolta, Double velocidadeMedia) {
+	public Voltas(LocalTime horaTermino, LocalTime tempoVolta, Double velocidadeMedia, Integer numeroVolta) {
 		super();
 		this.horaTermino = horaTermino;
 		this.tempoVolta = tempoVolta;
 		this.velocidadeMedia = velocidadeMedia;
+		this.numeroVolta = numeroVolta;
 	}
 
 	public LocalTime getHoraTermino() {
@@ -36,11 +38,18 @@ public class Voltas {
 	public void setVelocidadeMedia(Double velocidadeMedia) {
 		this.velocidadeMedia = velocidadeMedia;
 	}
+	public Integer getNumeroVolta() {
+		return numeroVolta;
+	}
+
+	public void setNumeroVolta(Integer numeroVolta) {
+		this.numeroVolta = numeroVolta;
+	}
 
 	@Override
 	public String toString() {
 		return "Voltas [horaTermino=" + horaTermino + ", tempoVolta=" + tempoVolta + ", velocidadeMedia="
-				+ velocidadeMedia + "]";
+				+ velocidadeMedia + ", numeroVolta=" + numeroVolta + "]";
 	}
-
+	
 }
