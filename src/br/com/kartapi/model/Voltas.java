@@ -6,8 +6,18 @@ public class Voltas {
 	
 	private LocalTime horaTermino;
 	private LocalTime tempoVolta;
-	private Float velocidadeMedia;
+	private Double velocidadeMedia;
 	
+	public Voltas() {
+	}
+	
+	public Voltas(LocalTime horaTermino, LocalTime tempoVolta, Double velocidadeMedia) {
+		super();
+		this.horaTermino = horaTermino;
+		this.tempoVolta = tempoVolta;
+		this.velocidadeMedia = velocidadeMedia;
+	}
+
 	public LocalTime getHoraTermino() {
 		return horaTermino;
 	}
@@ -20,10 +30,10 @@ public class Voltas {
 	public void setTempoVolta(LocalTime tempoVolta) {
 		this.tempoVolta = tempoVolta;
 	}
-	public Float getVelocidadeMedia() {
+	public Double getVelocidadeMedia() {
 		return velocidadeMedia;
 	}
-	public void setVelocidadeMedia(Float velocidadeMedia) {
+	public void setVelocidadeMedia(Double velocidadeMedia) {
 		this.velocidadeMedia = velocidadeMedia;
 	}
 
