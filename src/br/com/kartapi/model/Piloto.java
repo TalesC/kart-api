@@ -65,10 +65,11 @@ public class Piloto {
 
 	@Override
 	public String toString() {
-		return "Piloto [nome=" + nome + ", numeroCarro=" + codigo + ", voltas=" + voltas.toString() + 
+		return "Piloto [nome=" + nome + ", codigo=" + codigo + ", posicao=" + posicao + ", voltas=" + voltas.toString() + 
 				", tempoTotal=" + getTempoTotal() +
 				", voltasTotal=" + getTotalVoltas() +"]";
 	}
+	
 	
 	@Override
 	public int hashCode() {
@@ -79,6 +80,7 @@ public class Piloto {
 		return result;
 	}
 	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

@@ -17,15 +17,11 @@ public class KartMain {
 		
 		//busca todos os dados do arquivo de log
 		DadosLogService dadosService = new DadosLogServiceImpl();
-		List<DadosLog> dadosLog = dadosService.getDadosLog("./resource/kartlog.csv");
-		dadosLog.forEach(dados -> System.out.println(dados.toString()));
-		System.out.println("\n\n\n-------------------------------------\n\n\n");		
+		List<DadosLog> dadosLog = dadosService.getDadosLog("./resource/kartlog2.csv");
 		
 		//gera modelo com dados do piloto
 		PilotoService pilotoService = new PilotoServiceImpl();
 		List<Piloto> pilotos = pilotoService.getPilotos(dadosLog);
-		pilotos.forEach(p -> System.out.println(p.toString()));
-		System.out.println("\n\n\n-------------------------------------\n\n\n");
 		
 		//gera informações e imprime o resultado na tela
 		CorridaService corridaService = new CorridaServiceImpl();
