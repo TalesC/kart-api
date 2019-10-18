@@ -9,7 +9,7 @@ public class DadosLog {
 	private Integer codigoPiloto;
 	private Integer numeroVolta;
 	private LocalTime tempoVolta;
-	private Float velocidadeMediaVolta;
+	private Double velocidadeMediaVolta;
 	
 	
 	public LocalTime getHoraTerminoVolta() {
@@ -42,11 +42,18 @@ public class DadosLog {
 	public void setTempoVolta(LocalTime tempoVolta) {
 		this.tempoVolta = tempoVolta;
 	}
-	public Float getVelocidadeMediaVolta() {
+	public Double getVelocidadeMediaVolta() {
 		return velocidadeMediaVolta;
 	}
-	public void setVelocidadeMediaVolta(Float velocidadeMediaVolta) {
+	public void setVelocidadeMediaVolta(Double velocidadeMediaVolta) {
 		this.velocidadeMediaVolta = velocidadeMediaVolta;
 	}
+	@Override
+	public String toString() {
+		return "DadosLog [horaTerminoVolta=" + horaTerminoVolta + ", nomePiloto=" + nomePiloto + ", codigoPiloto="
+				+ codigoPiloto + ", numeroVolta=" + numeroVolta + ", tempoVolta=" + tempoVolta
+				+ ", velocidadeMediaVolta=" + velocidadeMediaVolta + "]";
+	}
+	
 	
 }
