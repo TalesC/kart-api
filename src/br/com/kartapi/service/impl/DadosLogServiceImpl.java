@@ -8,9 +8,9 @@ import java.util.List;
 
 import br.com.kartapi.model.DadosLog;
 import br.com.kartapi.model.builder.DadosLogBuilder;
-import br.com.kartapi.service.KartService;
+import br.com.kartapi.service.DadosLogService;
 
-public class KartServiceImpl implements KartService {
+public class DadosLogServiceImpl implements DadosLogService {
 	
 	
 	@Override

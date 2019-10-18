@@ -27,5 +27,9 @@ public class Piloto {
 	public void setVoltas(List<Voltas> voltas) {
 		this.voltas = voltas;
 	}
-
+	@Override
+	public String toString() {
+		return "Piloto [nome=" + nome + ", numeroCarro=" + numeroCarro + ", voltas=" + voltas + "]";
+	}
+	
 }
