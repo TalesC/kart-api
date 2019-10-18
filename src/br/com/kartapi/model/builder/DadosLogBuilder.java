@@ -18,7 +18,7 @@ public class DadosLogBuilder {
 	}
 	
 	public DadosLogBuilder nomePiloto(String nomeCodigoPiloto) {
-		String aux = nomeCodigoPiloto.substring(5, 12);
+		String aux = nomeCodigoPiloto.substring(5, nomeCodigoPiloto.length());
 		dados.setNomePiloto(aux);
 		return this;
 	}
