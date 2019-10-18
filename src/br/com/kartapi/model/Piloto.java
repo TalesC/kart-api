@@ -5,7 +5,7 @@ import java.util.List;
 public class Piloto {
 	
 	private String nome;
-	private String numeroCarro;
+	private Integer codigo;
 	
 	private List<Voltas> voltas;
 	
@@ -15,11 +15,11 @@ public class Piloto {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getNumeroCarro() {
-		return numeroCarro;
+	public Integer getCodigo() {
+		return codigo;
 	}
-	public void setNumeroCarro(String numeroCarro) {
-		this.numeroCarro = numeroCarro;
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
 	}
 	public List<Voltas> getVoltas() {
 		return voltas;
@@ -29,7 +29,7 @@ public class Piloto {
 	}
 	@Override
 	public String toString() {
-		return "Piloto [nome=" + nome + ", numeroCarro=" + numeroCarro + ", voltas=" + voltas + "]";
+		return "Piloto [nome=" + nome + ", numeroCarro=" + codigo + ", voltas=" + voltas + "]";
 	}
 	
 }
