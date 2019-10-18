@@ -1,11 +1,13 @@
 package br.com.kartapi.model;
 
+import java.time.LocalTime;
 import java.util.List;
 
 public class Piloto {
 	
 	private String nome;
 	private Integer codigo;
+	private Integer posicao;
 	
 	private List<Voltas> voltas;
 
@@ -18,6 +20,15 @@ public class Piloto {
 		this.codigo = codigo;
 	}
 	
+	public LocalTime getTempoTotal() {
+		
+	}
+	
+	public int getTotalVoltas() {
+		return voltas.size();
+	}
+	
+	//gets & sets
 	public String getNome() {
 		return nome;
 	}
@@ -36,9 +47,19 @@ public class Piloto {
 	public void setVoltas(List<Voltas> voltas) {
 		this.voltas = voltas;
 	}
+	public Integer getPosicao() {
+		return posicao;
+	}
+
+	public void setPosicao(Integer posicao) {
+		this.posicao = posicao;
+	}
+
 	@Override
 	public String toString() {
-		return "Piloto [nome=" + nome + ", numeroCarro=" + codigo + ", voltas=" + voltas + "]";
+		return "Piloto [nome=" + nome + ", numeroCarro=" + codigo + ", voltas=" + voltas.toString() + 
+				", tempoTotal=" + getTempoTotal() +
+				", voltasTotal=" + getTotalVoltas() +"]";
 	}
 	
 	@Override
@@ -71,4 +92,5 @@ public class Piloto {
 			return false;
 		return true;
 	}
+		
 }

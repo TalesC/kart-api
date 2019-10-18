@@ -37,4 +37,10 @@ public class Voltas {
 		this.velocidadeMedia = velocidadeMedia;
 	}
 
+	@Override
+	public String toString() {
+		return "Voltas [horaTermino=" + horaTermino + ", tempoVolta=" + tempoVolta + ", velocidadeMedia="
+				+ velocidadeMedia + "]";
+	}
+
 }
