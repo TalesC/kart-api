@@ -36,6 +36,11 @@ public class Piloto {
 		return voltas.size();
 	}
 	
+	public Double getTotalVecidadeMedia() {
+		Double aux = voltas.stream().mapToDouble(voltas -> voltas.getVelocidadeMedia()).sum();
+		return aux / voltas.size();
+	}
+	
 	//gets & sets
 	public String getNome() {
 		return nome;

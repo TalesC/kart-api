@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import br.com.kartapi.model.Piloto;
+import br.com.kartapi.model.Voltas;
 import br.com.kartapi.service.CorridaService;
 
 public class CorridaServiceImpl implements CorridaService {
@@ -25,7 +26,7 @@ public class CorridaServiceImpl implements CorridaService {
 		}
 			
 	}
-	
+		
 	private List<Piloto> filterPilotosByVoltas(List<Piloto> pilotos, int voltas){
 		return pilotos.stream().filter(p -> p.getTotalVoltas() == voltas).collect(Collectors.toList());
 	}
@@ -41,7 +42,14 @@ public class CorridaServiceImpl implements CorridaService {
 		System.out.println("\n Nome Piloto = " + piloto.getNome());
 		System.out.println("\n Qtde Voltas Completadas = " + piloto.getTotalVoltas());
 		System.out.println("\n Tempo Total de Prova = " + piloto.getTempoTotal());
+		System.out.println("\n Melhor Volta = " + getMelhorVoltaPiloto(piloto));
+		System.out.println("\n Velocidade Media Total= " + piloto.getTotalVecidadeMedia());
 	}
 	
+	private int getMelhorVoltaPiloto(Piloto piloto) {
+		List<Voltas> voltas = piloto.getVoltas();
+		Collections.sort(voltas, Comparator.comparing(Voltas::getTempoVolta));
+		return voltas.stream().findFirst().get().getNumeroVolta();
+	}
 
 }
